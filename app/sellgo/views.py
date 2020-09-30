@@ -65,11 +65,9 @@ class CsvProductViewSet(
                 "last_uploaded": CsvProduct.uploaded_date
             }
         """
-        queryset = (
-            CsvProduct.objects.order_by("-uploaded_date")
-            .order_by("title", "-uploaded_date")
-            .distinct("title")
-        )
+        queryset = CsvProduct.objects.order_by(
+            "title", "-uploaded_date"
+        ).distinct("title")
 
         objs = get_list_or_404(queryset, customer__id=pk)
 
