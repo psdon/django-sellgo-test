@@ -39,7 +39,7 @@ class Common(Configuration):
 
     ALLOWED_HOSTS = ["*"]
     ROOT_URLCONF = "app.urls"
-    SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
+    SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", "sample")
     WSGI_APPLICATION = "app.wsgi.application"
 
     # Email
