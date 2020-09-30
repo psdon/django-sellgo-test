@@ -70,7 +70,7 @@ Content-Type application/json
 
 **Request**:
 
-`POST` `/api/v1/csv-product/<int:customer_id>`
+`POST` `/api/v1/csv-product/<int:customer_id>/`
 
 Parameters:
 
